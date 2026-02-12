@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yassine Naimi - Professional CV</title>
+    <style>
+        @media print {
+            body { margin: 0; padding: 0; }
+            .no-print { display: none; }
+            .page-break { page-break-before: always; }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2d2d2d;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        }
+        
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 50px 60px 40px;
+            position: relative;
+        }
+        
+        .header h1 {
+            font-size: 42px;
+            font-weight: 300;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        
+        .header .tagline {
+            font-size: 16px;
+            font-weight: 300;
+            color: #e0e7ff;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+        }
+        
+        .contact-item strong {
+            margin-right: 8px;
+            color: #a5d8ff;
+        }
+        
+        /* Main Content */
+        .content {
+            padding: 40px 60px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            color: #1e3c72;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 3px solid #2a5298;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        /* Professional Summary */
+        .summary-box {
+            background: #f8fafc;
+            border-left: 5px solid #2a5298;
+            padding: 20px 25px;
+            font-size: 15px;
+            line-height: 1.8;
+            color: #374151;
+            text-align: justify;
+        }
+        
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .skill-item {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #2a5298;
+        }
+        
+        .skill-item strong {
+            color: #1e3c72;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 15px;
+        }
+        
+        .skill-item span {
+            color: #6b7280;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        /* Experience Items */
+        .experience-item, .education-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .experience-item:last-child, .education-item:last-child {
+            border-bottom: none;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .job-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1e3c72;
+        }
+        
+        .job-date {
+            color: #6b7280;
+            font-size: 14px;
+            font-style: italic;
+        }
+        
+        .company {
+            font-size: 15px;
+            color: #2a5298;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+        
+        .experience-item ul, .education-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .experience-item li, .education-item li {
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 10px;
+            color: #4b5563;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        
+        .experience-item li:before, .education-item li:before {
+            content: "▸";
+            position: absolute;
+            left: 8px;
+            color: #2a5298;
+            font-weight: bold;
+        }
+        
+        /* Additional Info */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .info-item {
+            background: #f8fafc;
+            padding: 12px 15px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        
+        .info-item strong {
+            color: #1e3c72;
+            display: inline-block;
+            margin-right: 5px;
+        }
+        
+        .info-item span {
+            color: #4b5563;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #f8fafc;
+            padding: 20px 60px;
+            text-align: center;
+            color: #6b7280;
+            font-size: 13px;
+            border-top: 2px solid #e5e7eb;
+        }
+        
+        /* Print Instructions */
+        .print-instructions {
+            margin: 30px auto;
+            max-width: 850px;
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .print-instructions h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .print-instructions p {
+            color: #856404;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>YASSINE NAIMI</h1>
+            <div class="tagline">Professional | Multilingual | Results-Driven</div>
+            
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <strong>📍</strong> 341 Gloucester Street, Ottawa, ON K1R 5N3
+                </div>
+                <div class="contact-item">
+                    <strong>📧</strong> yassinenaimii@icloud.com
+                </div>
+                <div class="contact-item">
+                    <strong>📱</strong> 613-410-5524
+                </div>
+                <div class="contact-item">
+                    <strong>🇨🇦</strong> Post-Graduation Work Permit (Valid)
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Professional Summary -->
+            <div class="section">
+                <h2 class="section-title">Professional Summary</h2>
+                <div class="summary-box">
+                    Versatile and dedicated professional with a proven track record of success across multiple industries including team supervision, retail management, customer service, and operations. Demonstrated ability to lead teams, optimize workflows, and deliver exceptional results in fast-paced environments. Strong analytical and problem-solving skills complemented by excellent interpersonal abilities. Authorized to work in Canada with a Post-Graduation Work Permit. Trilingual communicator fluent in English, French, and Arabic, capable of building relationships across diverse cultural contexts and adapting quickly to new challenges.
+                </div>
+            </div>
+            
+            <!-- Core Competencies -->
+            <div class="section">
+                <h2 class="section-title">Core Competencies</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <strong>Leadership & Team Management</strong>
+                        <span>Staff supervision, scheduling, performance monitoring, conflict resolution</span>
+                    </div>
+                    <div class="skill-item">
+                        <strong>Operations & Coordination</strong>
+                        <span>Process optimization, workflow management, quality assurance</span>
+                    </div>
+                    <div class="skill-item">
+                        <strong>Customer Relations</strong>
+                        <span>Client service excellence, stakeholder communication, relationship building</span>
+                    </div>
+                    <div class="skill-item">
+                        <strong>Inventory & Resource Management</strong>
+                        <span>Stock control, supply chain coordination, resource allocation</span>
+                    </div>
+                    <div class="skill-item">
+                        <strong>Analytical & Problem Solving</strong>
+                        <span>Critical thinking, data analysis, strategic decision-making</span>
+                    </div>
+                    <div class="skill-item">
+                        <strong>Multilingual Communication</strong>
+                        <span>English, French, Arabic (fluent in all three languages)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Professional Experience -->
+            <div class="section">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Team Supervisor</div>
+                        <div class="job-date">August 2024 – Present</div>
+                    </div>
+                    <div class="company">Chartwell Home Care | Ottawa, ON, Canada</div>
+                    <ul>
+                        <li>Oversee daily operations and supervise support staff in a residential care facility, ensuring compliance with health and safety standards</li>
+                        <li>Coordinate staff schedules, assign responsibilities, and conduct quality assurance reviews to maintain service excellence</li>
+                        <li>Maintain safe, hygienic, and respectful living environments for residents through proactive monitoring and intervention</li>
+                        <li>Facilitate effective communication between families, residents, and team members to ensure consistent, high-quality care delivery</li>
+                        <li>Developed advanced leadership, time management, and conflict resolution skills in a person-centred care environment</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Sales Associate</div>
+                        <div class="job-date">2021 – 2023</div>
+                    </div>
+                    <div class="company">IKEA | Morocco</div>
+                    <ul>
+                        <li>Provided comprehensive customer assistance regarding product selection, features, and purchasing decisions</li>
+                        <li>Managed merchandise placement, shelf stocking, and visual merchandising displays to enhance customer experience</li>
+                        <li>Monitored inventory levels and maintained accurate stock records to ensure operational efficiency and product availability</li>
+                        <li>Collaborated with team members to achieve sales targets and maintain high standards of store presentation</li>
+                        <li>Contributed to smooth store operations through effective task prioritization, teamwork, and customer-focused service</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="job-header">
+                        <div class="job-title">Operations Assistant</div>
+                        <div class="job-date">2007 – 2018</div>
+                    </div>
+                    <div class="company">Family Business | Morocco</div>
+                    <ul>
+                        <li>Supported daily business operations including resource management, logistics coordination, and maintenance activities</li>
+                        <li>Executed operational tasks consistently while adapting to varying conditions and priorities</li>
+                        <li>Developed strong work ethic, problem-solving abilities, and operational discipline through diverse responsibilities</li>
+                        <li>Demonstrated reliability, attention to detail, and commitment to achieving operational objectives</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Education -->
+            <div class="section">
+                <h2 class="section-title">Education</h2>
+                
+                <div class="education-item">
+                    <div class="job-header">
+                        <div class="job-title">AEC – Finance and Insurance</div>
+                        <div class="job-date">January 2024 – March 2025</div>
+                    </div>
+                    <div class="company">Collège Universel | Gatineau, QC, Canada</div>
+                    <ul>
+                        <li>Completed comprehensive coursework in financial services, insurance products, client relationship management, and advisory practices</li>
+                        <li>Gained expertise in financial analysis, risk assessment, and professional client communication</li>
+                    </ul>
+                </div>
+                
+                <div class="education-item">
+                    <div class="job-header">
+                        <div class="job-title">Bachelor's Degree in Private Law</div>
+                        <div class="job-date">October 2018 – July 2021</div>
+                    </div>
+                    <div class="company">FSJESM (Faculty of Legal, Economic and Social Sciences) | Mohammedia, Morocco</div>
+                    <ul>
+                        <li>Studied civil law, business law, contract law, and legal frameworks governing commercial transactions</li>
+                        <li>Developed advanced critical thinking, analytical reasoning, research, and written communication capabilities</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Additional Information -->
+            <div class="section">
+                <h2 class="section-title">Additional Information</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <strong>Languages:</strong>
+                        <span>English (Fluent), French (Fluent), Arabic (Native)</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Work Authorization:</strong>
+                        <span>Valid Post-Graduation Work Permit</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Availability:</strong>
+                        <span>Immediate</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Physical Capacity:</strong>
+                        <span>Excellent health and fitness</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            References available upon request
+        </div>
+    </div>
+    
+    <!-- Print Instructions -->
+    <div class="print-instructions no-print">
+        <h3>📄 To Save as PDF</h3>
+        <p>Press <strong>Ctrl+P</strong> (Windows) or <strong>Cmd+P</strong> (Mac), then select <strong>"Save as PDF"</strong> as your printer destination.</p>
+    </div>
+</body>
+</html>
