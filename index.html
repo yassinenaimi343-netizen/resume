@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yassine Naimi - Customer Service & Sales Professional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            background-color: #4CAF50;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .resume-container {
+            max-width: 1024px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .resume-inner {
+            display: flex;
+            min-height: 963px;
+        }
+
+        /* Left Column */
+        .left-column {
+            width: 55%;
+            background: white;
+            padding: 0;
+            position: relative;
+        }
+
+        /* Header Banner */
+        .header-banner {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 40px 30px 60px;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+            margin-bottom: 20px;
+        }
+
+        .header-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .name {
+            font-size: 36px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Left Content */
+        .left-content {
+            padding: 20px 40px 40px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #333;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .section-text {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .job {
+            margin-bottom: 25px;
+        }
+
+        .job-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 5px;
+        }
+
+        .job-company {
+            font-size: 13px;
+            color: #666;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .job-location {
+            font-size: 13px;
+            color: #888;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .job ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .job li {
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+
+        /* Right Column */
+        .right-column {
+            width: 45%;
+            background: #f8f8f8;
+            padding: 80px 35px 40px;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .right-section {
+            margin-bottom: 30px;
+        }
+
+        .right-section-title {
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #333;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .contact-item {
+            font-size: 13px;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .contact-label {
+            font-weight: bold;
+            color: #4CAF50;
+            text-transform: uppercase;
+            font-size: 11px;
+        }
+
+        .education-item {
+            margin-bottom: 20px;
+        }
+
+        .education-title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 3px;
+        }
+
+        .education-details {
+            font-size: 13px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .education-date {
+            font-size: 12px;
+            color: #888;
+            font-style: italic;
+            margin-top: 3px;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .checkmark {
+            color: #4CAF50;
+            font-size: 16px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .language-table {
+            width: 100%;
+            font-size: 12px;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .language-table th {
+            background: #4CAF50;
+            color: white;
+            padding: 8px;
+            text-align: left;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+
+        .language-table td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+            color: #555;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .resume-container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .resume-inner {
+                flex-direction: column;
+            }
+            .left-column, .right-column {
+                width: 100%;
+            }
+            .right-column {
+                border-left: none;
+                border-top: 4px solid #4CAF50;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="resume-inner">
+            <!-- Left Column -->
+            <div class="left-column">
+                <!-- Header Banner -->
+                <div class="header-banner">
+                    <div class="header-icon">📞</div>
+                    <div class="name">YASSINE<br>NAIMI</div>
+                    <div class="title">Customer Service & Sales Professional</div>
+                </div>
+
+                <!-- Left Content -->
+                <div class="left-content">
+                    <!-- Who Am I Section -->
+                    <div class="section">
+                        <div class="section-title">WHO AM I?</div>
+                        <div class="section-text">
+                            Bilingual (French/English/Arabic) customer service and sales professional with 4+ years of experience in high-volume call centers and sales environments in Morocco. Proven track record of exceeding sales targets, resolving customer issues efficiently, and maintaining high customer satisfaction scores. Seeking to leverage multilingual abilities and strong communication skills in a call center or sales center role in Ottawa.
+                        </div>
+                    </div>
+
+                    <!-- Work History Section -->
+                    <div class="section">
+                        <div class="section-title">WORK HISTORY</div>
+
+                        <div class="job">
+                            <div class="job-title">Team Supervisor</div>
+                            <div class="job-company">CHARTWELL HOME CARE</div>
+                            <div class="job-location">Ottawa, ON • May 2024 – April 2025</div>
+                            <ul>
+                                <li>Oversee daily operations and supervise support staff ensuring health and safety compliance</li>
+                                <li>Coordinate schedules, assign responsibilities, and conduct quality assurance reviews</li>
+                                <li>Maintain safe, respectful living environments through proactive monitoring</li>
+                                <li>Facilitate communication between families, residents, and team for consistent care delivery</li>
+                            </ul>
+                        </div>
+
+                        <div class="job">
+                            <div class="job-title">Customer Service Representative – Inbound</div>
+                            <div class="job-company">MAJOREL (FORMERLY ARVATO)</div>
+                            <div class="job-location">Rabat, Morocco • June 2021 – February 2022</div>
+                            <ul>
+                                <li>Handled an average of 70–90 inbound calls per day for a French energy provider (Total Energies)</li>
+                                <li>Maintained a customer satisfaction score (CSAT) of 92% and first-call resolution rate of 88%</li>
+                                <li>Identified upselling opportunities during service calls, generating an additional €3,500/month in revenue</li>
+                                <li>Resolved escalated customer complaints with professionalism, reducing churn rate by 12%</li>
+                                <li>Accurately documented all customer interactions in the Hermès dialer system</li>
+                                <li>Adhered to strict quality assurance standards and data protection regulations (GDPR)</li>
+                            </ul>
+                        </div>
+
+                        <div class="job">
+                            <div class="job-title">Sales Advisor – Outbound Sales</div>
+                            <div class="job-company">INTELCIA GROUP</div>
+                            <div class="job-location">Casablanca, Morocco • March 2019 – August 2020</div>
+                            <ul>
+                                <li>Conducted 80–120 outbound calls daily to prospective customers for major French telecom clients (Orange, SFR)</li>
+                                <li>Consistently exceeded monthly sales targets by 115–130%, ranking in the top 10% of the sales team</li>
+                                <li>Utilized persuasive communication and consultative selling techniques to convert cold leads</li>
+                                <li>Managed customer data using Salesforce CRM and internal tools</li>
+                                <li>Improved closing rate from 18% to 27% through coaching and feedback application</li>
+                                <li>Trained and mentored 5 new hires on sales scripts, objection handling, and CRM navigation</li>
+                                <li>Received "Best Sales Agent of the Quarter" award twice (Q3 2022, Q1 2023)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <!-- Contact Section -->
+                <div class="right-section">
+                    <div class="right-section-title">CONTACT</div>
+                    <div class="contact-item">
+                        <span class="contact-label">Email:</span> yassinenaimi343@gmail.com
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Phone:</span> (613) XXX-XXXX
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Location:</span> Ottawa, ON
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">LinkedIn:</span> linkedin.com/in/yassine-naimi
+                    </div>
+                </div>
+
+                <!-- Education Section -->
+                <div class="right-section">
+                    <div class="right-section-title">EDUCATION</div>
+                    
+                    <div class="education-item">
+                        <div class="education-title">Collège Universel</div>
+                        <div class="education-details">
+                            AEC - Finance & Insurance<br>
+                            <span style="font-size: 12px;">Financial services, insurance products, client management, and advisory practices</span>
+                        </div>
+                        <div class="education-date">Jan 2024 - Mar 2025 • Gatineau, QC</div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="education-title">FSJESM</div>
+                        <div class="education-details">
+                            Bachelor's - Private Law<br>
+                            <span style="font-size: 12px;">Civil, business, and contract law with advanced analytical and research skills</span>
+                        </div>
+                        <div class="education-date">Oct 2018 - Jul 2021 • Mohammedia, Morocco</div>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="right-section">
+                    <div class="right-section-title">SKILLS</div>
+                    <div class="skill-item">
+                        <span class="checkmark">✓</span> Customer Service Excellence
+                    </div>
+                    <div class="skill-item">
+                        <span class="checkmark">✓</span> Outbound & Inbound Sales
+                    </div>
+                    <div class="skill-item">
+                        <span class="checkmark">✓</span> Salesforce CRM
+                    </div>
+                    <div class="skill-item">
+                        <span class="checkmark">✓</span> Consultative Selling
+                    </div>
+                    <div class="skill-item">
+                        <span class="checkmark">✓</span> Objection Handling
+                    </div>
+                    <div class="skill-item">
+                        <span class="checkmark">✓</span> Team Leadership & Training
+                    </div>
+                    <div class="skill-item">
+                        <span class="checkmark">✓</span> GDPR Compliance
+                    </div>
+                    <div class="skill-item">
+                        <span class="checkmark">✓</span> Quality Assurance
+                    </div>
+                </div>
+
+                <!-- Languages Section -->
+                <div class="right-section">
+                    <div class="right-section-title">LANGUAGES</div>
+                    <table class="language-table">
+                        <thead>
+                            <tr>
+                                <th>Language</th>
+                                <th>Speaking</th>
+                                <th>Reading</th>
+                                <th>Writing</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Arabic</strong></td>
+                                <td>Native</td>
+                                <td>Native</td>
+                                <td>Native</td>
+                            </tr>
+                            <tr>
+                                <td><strong>French</strong></td>
+                                <td>Fluent (C1)</td>
+                                <td>Fluent</td>
+                                <td>Fluent</td>
+                            </tr>
+                            <tr>
+                                <td><strong>English</strong></td>
+                                <td>Advanced (C2)</td>
+                                <td>Advanced</td>
+                                <td>Advanced</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
